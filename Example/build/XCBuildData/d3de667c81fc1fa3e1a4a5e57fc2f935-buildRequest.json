@@ -1,0 +1,51 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e9857f6dd889e79d2e82c53a98e7a6915a5"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e9811f2a7f36749d58ea0a76dc5500eea5a"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e9863bc7b8b3904345ee44336d740e85a5a"
+    }
+  ],
+  "containerPath" : "/Users/liyong/Desktop/workspace/Repositories/ZQFoundation/Example/Pods/Pods.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/liyong/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/liyong/Library/Developer/Xcode/DerivedData/Pods-edafioyxsvbhcffdtpeezfyxuflq/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/liyong/Library/Developer/Xcode/DerivedData/Pods-edafioyxsvbhcffdtpeezfyxuflq/Index.noindex/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : false
+}

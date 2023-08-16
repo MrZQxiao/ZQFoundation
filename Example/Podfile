@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'ZQFoundation_Example' do
+  pod 'ZQFoundation', :path => '../'
+
+  target 'ZQFoundation_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

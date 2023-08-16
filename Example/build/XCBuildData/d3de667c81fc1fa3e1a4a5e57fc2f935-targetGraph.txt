@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+ZQFoundation in Pods, no dependencies
+Pods-ZQFoundation_Example in Pods, depends on:
+ZQFoundation in Pods (explicit)
+Pods-ZQFoundation_Tests in Pods, depends on:
+Pods-ZQFoundation_Example in Pods (explicit)
