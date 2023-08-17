@@ -1,25 +1,16 @@
 //
-//  UIViewController+MSExtension.m
-//  MIS
+//  UIViewController+ZQExtension.m
+//  ZQFoundation
 //
-//  Created by LIUZHEN on 2017/2/14.
-//  Copyright © 2017年 58. All rights reserved.
+//  Created by LY on 2023/8/17.
 //
 
-#import "UIViewController+MSExtension.h"
-#import "NSString+MSExtension.h"
-#import "UIColor+MSExtension.h"
-#import "UIImage+MSExtension.h"
-#import "UIFont+MSExtension.h"
-#import "UIBarButtonItem+MSExtension.h"
+#import "UIViewController+ZQExtension.h"
 #import <objc/runtime.h>
-#import "NSObject+MSExtension.h"
-#import "MSRouter.h"
+#import "NSObject+ZQExtension.h"
 
-@implementation UIViewController (MSExtension)
 
-#pragma mark - Public Methods
-
+@implementation UIViewController (ZQExtension)
 + (void)load {
     method_exchangeImplementations(class_getInstanceMethod([self class], @selector(initWithNibName:bundle:)),
                                    class_getInstanceMethod([self class], @selector(ms_initWithNibName:bundle:)));
@@ -88,16 +79,13 @@
         } else {
             return viewController;
         }
-//    } else if ([viewController isKindOfClass:[MSCTabBarController class]]) {
-//        MSCTabBarController *vc = (MSCTabBarController *)viewController;
-//        if (vc.viewControllers.count > 0) {
-//            return [self ms_findViewController:vc.selectedViewController];
-//        } else {
-//            return viewController;
-//        }
-    } else if ([viewController isKindOfClass:NSClassFromString(@"MSTabBarController")]) {
-        UIViewController *vc = viewController;
-        return [self ms_findViewController:[MSRouter performTarget:@"tabBar" action:@"currentVC" params:nil]];
+    } else if ([viewController isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *vc = (UITabBarController *)viewController;
+        if (vc.viewControllers.count > 0) {
+            return [self ms_findViewController:vc.selectedViewController];
+        } else {
+            return viewController;
+        }
     } else {
         return viewController;
     }
@@ -123,4 +111,3 @@
 }
 
 @end
-

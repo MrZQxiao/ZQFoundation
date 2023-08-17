@@ -1,16 +1,15 @@
 //
-//  UIViewController+MSExtension.h
-//  MIS
+//  UIViewController+ZQExtension.h
+//  ZQFoundation
 //
-//  Created by LIUZHEN on 2017/2/14.
-//  Copyright © 2017年 58. All rights reserved.
+//  Created by LY on 2023/8/17.
 //
 
 #import <UIKit/UIKit.h>
 
-#pragma mark - MSExtension
+NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewController (MSExtension)
+@interface UIViewController (ZQExtension)
 
 /**
  *  当前控制器
@@ -29,5 +28,7 @@
  */
 - (void)resetRotation;
 
+
 @end
 
+NS_ASSUME_NONNULL_END

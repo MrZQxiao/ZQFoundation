@@ -25,18 +25,26 @@ Pod::Spec.new do |s|
   s.author           = { 'xiaozq' => '285061422@qq.com' }
   s.source           = { :git => 'https://github.com/MrZQxiao/ZQFoundation.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.module_name   = 'ZQFoundation'
   s.ios.deployment_target = '11.0'
+  s.static_framework = true
+
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
-  s.source_files = 'ZQFoundation/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ZQFoundation' => ['ZQFoundation/Assets/*.png']
-  # }
+  s.source_files = 'ZQFoundation/**/*'
+  s.default_subspec = 'Base'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'Base' do |ss|
+      ss.source_files = 'ZQFoundation/Base/ZQFoundation.h'
+      ss.dependency 'ZQFoundation/Categories'
+  end
+
+  s.subspec 'Categories' do |cate|
+      cate.public_header_files = 'ZQFoundation/Categories/*.h'
+      cate.dependency 'SDWebImage'
+      cate.dependency 'MJExtension'
+      cate.source_files = 'ZQFoundation/Categories/**/*.{h,m}'
+  end
+
 end
